@@ -14,25 +14,27 @@ export default function Home() {
   ];
 
   const timeline = [
-    {
-      title: "Self-Learning Journey",
-      period: "2025 – Present",
-      description:
-        "Focused on mastering modern web development through online courses, tutorials, and building personal projects.",
-    },
-    {
-      title: "Education",
-      period: "2024 – Present",
-      description:
-        "Currently expanding knowledge in software development, specializing in Next.js, Tailwind CSS, and Framer Motion.",
-    },
-    {
-      title: "Future Goals",
-      period: "Upcoming",
-      description:
-        "Looking forward to gaining hands-on experience through internships, collaborations, and open-source contributions.",
-    },
-  ];
+  {
+    title: "Self-Learning Journey",
+    period: "2026 – Present",
+    description: "Focused on mastering modern web development through online courses, tutorials, and building personal projects.",
+  },
+  {
+    title: "Education - Kwame Nkrumah University of Science and Technology",
+    period: "2026 – Present",
+    description: "Currently studying Information Technology at KNUST, building strong foundations in programming, software development, and modern web technologies.",
+  },
+  {
+    title: "High School - St. James Seminary Senior High School",
+    period: "2023 – 2025",
+    description: "Completed secondary education with emphasis on science and mathematics, preparing for a career in technology.",
+  },
+  {
+    title: "Future Goals",
+    period: "Upcoming",
+    description: "Looking forward to gaining hands-on experience through internships, collaborations, and open-source contributions.",
+  },
+];
 
   return (
     <main>
@@ -75,99 +77,98 @@ export default function Home() {
           className="flex-1 flex justify-center mt-8 md:mt-0"
         >
           <Image
-            src="/me.jpg"
-            alt="Andy Nyame"
-            width={300}
-            height={300}
-            className="rounded-full shadow-lg border-4 border-blue-500"
-          />
+  src="/me.png"   
+  alt="Andy Nyame"
+  width={300}
+  height={300}
+  className="rounded-full shadow-lg border-4 border-blue-500"
+/>
         </motion.div>
       </section>
 
       {/* About Section */}
-      <section
-        id="about"
-        className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white px-6"
-      >
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          className="flex-1 flex justify-center mb-8 md:mb-0"
-        >
-          <Image
-            src="/me.jpg"
-            alt="Andy Nyame"
-            width={250}
-            height={250}
-            className="rounded-lg shadow-lg border-4 border-blue-500"
-          />
-        </motion.div>
+<section
+  id="about"
+  className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-800 px-6 py-12"
+>
+  {/* Profile Image */}
+  <motion.div
+    initial={{ opacity: 0, x: -50 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 1 }}
+    className="flex-1 flex justify-center mb-8 md:mb-0"
+  >
+    <Image
+      src="/about.jpeg"   // make sure your photo is saved in /public as me.jpg
+      alt="Andy Nyame"
+      width={250}
+      height={250}
+      className="rounded-lg shadow-lg border-4 border-blue-500"
+    />
+  </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          className="flex-1 text-center md:text-left"
-        >
-          <h2 className="text-4xl font-bold mb-4">About Me</h2>
-          <p className="text-lg mb-6">
-            I’m Andy Nyame, a passionate Software Developer focused on building
-            modern, responsive, and user‑friendly web applications. I love
-            combining clean design with smooth animations to create engaging
-            digital experiences.
-          </p>
-
-          <ul className="space-y-3 text-left">
-            <li className="flex items-center">
-              <span className="text-blue-500 mr-2">✔</span>
-              Skilled in Next.js, Tailwind CSS, and Framer Motion
-            </li>
-            <li className="flex items-center">
-              <span className="text-blue-500 mr-2">✔</span>
-              Experienced with responsive design and performance optimization
-            </li>
-            <li className="flex items-center">
-              <span className="text-blue-500 mr-2">✔</span>
-              Passionate about creating smooth user experiences
-            </li>
-          </ul>
-        </motion.div>
-      </section>
+  {/* Bio Text */}
+  <motion.div
+    initial={{ opacity: 0, x: 50 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 1 }}
+    className="flex-1 text-center md:text-left max-w-xl"
+  >
+    <h2 className="text-4xl font-bold mb-6">About Me</h2>
+    <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
+      Hi, I’m <span className="font-bold text-blue-500">Andy Nyame</span>, an
+      Information Technology student at KNUST. I’m passionate about building
+      modern, responsive, and user‑friendly web applications.
+    </p>
+    <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
+      My journey combines academic learning with self‑driven exploration of
+      technologies like Next.js, Tailwind CSS, Framer Motion, Python, and C++.
+    </p>
+    <p className="text-lg text-gray-700 dark:text-gray-300">
+      I enjoy solving problems, experimenting with new tools, and creating
+      smooth digital experiences that make technology feel effortless.
+    </p>
+  </motion.div>
+</section>
 
       {/* Skills Section */}
-      <section
-        id="skills"
-        className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center px-6 py-12"
-      >
-        <motion.h2
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-4xl font-bold mb-12"
-        >
-          My Skills
-        </motion.h2>
+<section
+  id="skills"
+  className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center px-6 py-12"
+>
+  <motion.h2
+    initial={{ opacity: 0, y: -30 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1 }}
+    className="text-4xl font-bold mb-12"
+  >
+    My Skills
+  </motion.h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-10">
-          {skills.map((skill, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ scale: 1.1 }}
-              className="flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-lg"
-            >
-              <Image
-                src={skill.icon}
-                alt={skill.name}
-                width={80}
-                height={80}
-                className="mb-4"
-              />
-              <p className="text-lg font-semibold">{skill.name}</p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+  <div className="grid grid-cols-2 md:grid-cols-3 gap-10">
+    {[
+      { name: "CSS", icon: "/css.png" },
+      { name: "JavaScript", icon: "/javas.jpg" },
+      { name: "Tailwind CSS", icon: "/tailwind.png" },
+      { name: "C++", icon: "/c.png" },
+    ].map((skill, index) => (
+      <motion.div
+        key={index}
+        whileHover={{ scale: 1.1 }}
+        className="flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-lg"
+      >
+        <Image
+          src={skill.icon}
+          alt={skill.name}
+          width={80}
+          height={80}
+          className="mb-4"
+        />
+        <p className="text-lg font-semibold">{skill.name}</p>
+      </motion.div>
+    ))}
+  </div>
+</section>
 
       {/* Experience & Education Section */}
       <section
