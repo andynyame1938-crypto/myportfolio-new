@@ -37,54 +37,57 @@ export default function Home() {
 ];
 
   return (
-    <main>
+    <main> 
+
       {/* Hero Section */}
-      <section className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-gray-900 text-white px-6">
-        <div className="flex-1 text-center md:text-left">
-          <motion.h1
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="text-5xl font-bold mb-4"
-          >
-            Hi, I’m Andy Nyame
-          </motion.h1>
+<section className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-gray-900 text-white px-6 pt-24 md:pt-32">
+  <div className="flex-1 text-center md:text-left">
+    <motion.h1
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      className="text-5xl font-bold mb-4"
+    >
+      Hi, I’m Andy Nyame
+    </motion.h1>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 1 }}
-            className="text-xl text-gray-300 mb-6"
-          >
-            A passionate Software Developer building modern web experiences
-          </motion.p>
+    <motion.p
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.5, duration: 1 }}
+      className="text-xl text-gray-300 mb-6"
+    >
+      A passionate Software Developer building modern web experiences
+    </motion.p>
 
-          <motion.a
-            href="#skills"
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 1, duration: 0.5 }}
-            className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg transition"
-          >
-            View My Work
-          </motion.a>
-        </div>
+    <motion.a
+      href="#skills"
+      initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
+      transition={{ delay: 1, duration: 0.5 }}
+      className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg transition"
+    >
+      View My Work
+    </motion.a>
+  </div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 1.2, duration: 0.8 }}
-          className="flex-1 flex justify-center mt-8 md:mt-0"
-        >
-          <Image
-  src="/me.png"   
-  alt="Andy Nyame"
-  width={300}
-  height={300}
-  className="rounded-full shadow-lg border-4 border-blue-500"
-/>
-        </motion.div>
-      </section>
+  <motion.div
+    initial={{ opacity: 0, scale: 0.8 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ delay: 1.2, duration: 0.8 }}
+    className="flex-1 flex justify-center mt-8 md:mt-0"
+  >
+    <Image
+      src="/me.png"
+      alt="Andy Nyame"
+      width={250}
+      height={250}
+      className="rounded-full object-cover mx-auto w-40 h-40 md:w-64 md:h-64 border-4 border-blue-500 shadow-lg"
+      priority
+    />
+  </motion.div>
+</section>
+
 
       {/* About Section */}
 <section
@@ -242,6 +245,16 @@ export default function Home() {
     >
       LinkedIn
     </a>
+      {/* Phone number */}
+        <p className="text-lg">
+          <a
+  href="tel:+233539487990"
+  className="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-lg shadow-lg transition flex items-center gap-2"
+>
+  📞 Call Me
+</a>
+
+        </p>
     <a
       href="https://github.com/andynyame1938-crypto"
       target="_blank"
